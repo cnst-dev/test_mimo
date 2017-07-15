@@ -20,7 +20,10 @@
 		591B2BD4C62D400CB4E39B30 /* Pods_MimoiOSCodingChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA866BE4B2BF25DEA765CAF4 /* Pods_MimoiOSCodingChallengeTests.framework */; };
 		B5B57A556C0D6264F7B2EB66 /* Pods_MimoiOSCodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA2B99159E74AED055510E /* Pods_MimoiOSCodingChallengeUITests.framework */; };
 		BD6E69CAC730DB8A44EDB347 /* Pods_MimoiOSCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0752AC0B1484421C9660620 /* Pods_MimoiOSCodingChallenge.framework */; };
-		CF66180E1F189A5F0001898F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF66180D1F189A5F0001898F /* AuthenticationViewController.swift */; };
+		CF6618181F18E2220001898F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6618171F18E2220001898F /* AuthenticationViewController.swift */; };
+		CF85EEC91F18FFA9009BD5DB /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85EEC81F18FFA9009BD5DB /* LoginTextField.swift */; };
+		CF85EECB1F190297009BD5DB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85EECA1F190297009BD5DB /* LoginButton.swift */; };
+		CFA733511F19C9F700EBC31E /* Constraintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA733501F19C9F700EBC31E /* Constraintable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,10 @@
 		9BFE5D015BD98F7F02DA45C6 /* Pods-MimoiOSCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MimoiOSCodingChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MimoiOSCodingChallenge/Pods-MimoiOSCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		C0752AC0B1484421C9660620 /* Pods_MimoiOSCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CA2B99159E74AED055510E /* Pods_MimoiOSCodingChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF66180D1F189A5F0001898F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		CF6618171F18E2220001898F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		CF85EEC81F18FFA9009BD5DB /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		CF85EECA1F190297009BD5DB /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		CFA733501F19C9F700EBC31E /* Constraintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraintable.swift; sourceTree = "<group>"; };
 		E18B8DDCBC35C4D884C0C7B3 /* Pods-MimoiOSCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MimoiOSCodingChallengeTests/Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA866BE4B2BF25DEA765CAF4 /* Pods_MimoiOSCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -212,9 +218,36 @@
 		CF6618111F189BF80001898F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				CF66180D1F189A5F0001898F /* AuthenticationViewController.swift */,
+				CFA7334F1F19C9D200EBC31E /* Protocols */,
+				CF85EEC61F18FF56009BD5DB /* View */,
+				CF85EEC71F18FF63009BD5DB /* Controller */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		CF85EEC61F18FF56009BD5DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF85EEC81F18FFA9009BD5DB /* LoginTextField.swift */,
+				CF85EECA1F190297009BD5DB /* LoginButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CF85EEC71F18FF63009BD5DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF6618171F18E2220001898F /* AuthenticationViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CFA7334F1F19C9D200EBC31E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CFA733501F19C9F700EBC31E /* Constraintable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,12 +534,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCC6AB91E55A68400585FA1 /* SettingsAvatar.m in Sources */,
+				CF85EECB1F190297009BD5DB /* LoginButton.swift in Sources */,
+				CF85EEC91F18FFA9009BD5DB /* LoginTextField.swift in Sources */,
 				2BF3DEFA1E54B79A004DD445 /* AppDelegate.m in Sources */,
 				2BCC6AB61E55A55A00585FA1 /* SettingsTableViewCell.swift in Sources */,
-				CF66180E1F189A5F0001898F /* AuthenticationViewController.swift in Sources */,
+				CF6618181F18E2220001898F /* AuthenticationViewController.swift in Sources */,
 				2BF3DEF71E54B79A004DD445 /* main.m in Sources */,
 				2BF3DF2D1E54B7DF004DD445 /* SettingsViewController.swift in Sources */,
 				2BF3DF2C1E54B7DF004DD445 /* SettingsViewController.m in Sources */,
+				CFA733511F19C9F700EBC31E /* Constraintable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
