@@ -15,9 +15,49 @@ class AuthenticationViewController: UIViewController {
     let passwordTextField = LoginTextField()
     let submitButton = LoginButton()
 
+    // MARK: - Properties
+    let authManager: (AuthControllerDelegate & UserDataSource) = NetworkClient.shared
+
+
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupView()
+    }
+
+    /// Logins a user with his email and password.
+    func login() {
+        guard let mail = mailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        authManager.login(mail: mail, password: password, success: { [weak self] dictionary in
+            print("SUCCESS LOGIN", dictionary)
+
+            self?.authManager.getUserInfo(success: { dictionary in
+                print("USER INFO SUCCESS", dictionary)
+            }, failure: { message in
+                print("ERROR USER INFO", message)
+            })
+
+        }) { message in
+            print("ERROR LOGIN", message)
+        }
+
+    }
+
+    /// Registers a user with his email and password.
+    func register() {
+        guard let mail = mailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        authManager.register(mail: mail, password: password, success: { dict in
+            print("SUCCESS REGISTER", dict)
+        }) { message in
+            print("ERROR REGISTER", message)
+        }
+    }
+
+    /// Setups text fields and a button in the view.
+    func setupView() {
 
         view.addSubview(mailTextField)
         view.addSubview(passwordTextField)
@@ -25,16 +65,13 @@ class AuthenticationViewController: UIViewController {
 
         view.backgroundColor = UIColor.white
 
-        setupView()
-    }
-
-    /// Setups text fields and a button in the view.
-    func setupView() {
         mailTextField.setup(placeholder: "E-mail", width: 150, height: 30)
+        mailTextField.keyboardType = .emailAddress
         passwordTextField.setup(placeholder: "Password", width: 150, height: 30)
+        passwordTextField.isSecureTextEntry = true
         submitButton.setup(title: "Submit", width: 150, height: 50)
 
-        submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
+        submitButton.addTarget(self, action: #selector(login), for: .touchUpInside)
 
         let mailTextFieldKey = #keyPath(mailTextField)
         let passwordTextFieldKey = #keyPath(passwordTextField)
@@ -70,11 +107,7 @@ class AuthenticationViewController: UIViewController {
             metrics: nil,
             views: views
         ))
-
+        
         NSLayoutConstraint.activate(constraints)
-    }
-
-    func submit() {
-        present(SettingsViewController(), animated: true)
     }
 }

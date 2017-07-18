@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>base_url</key>
+	<string>https://mimo-test.auth0.com</string>
+	<key>info_url</key>
+	<string>https://mimo-test.auth0.com/userinfo</string>
+	<key>sign_url</key>
+	<string>https://mimo-test.auth0.com/dbconnections/signup</string>
+	<key>auth_url</key>
+	<string>https://mimo-test.auth0.com/oauth/ro</string>
+</dict>
+</plist>

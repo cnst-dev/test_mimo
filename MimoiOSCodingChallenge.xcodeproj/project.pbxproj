@@ -21,9 +21,14 @@
 		B5B57A556C0D6264F7B2EB66 /* Pods_MimoiOSCodingChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CA2B99159E74AED055510E /* Pods_MimoiOSCodingChallengeUITests.framework */; };
 		BD6E69CAC730DB8A44EDB347 /* Pods_MimoiOSCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0752AC0B1484421C9660620 /* Pods_MimoiOSCodingChallenge.framework */; };
 		CF6618181F18E2220001898F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6618171F18E2220001898F /* AuthenticationViewController.swift */; };
+		CF6E48531F1C922A00F4C65E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6E48521F1C922A00F4C65E /* NetworkClient.swift */; };
+		CF6E48551F1C92A300F4C65E /* ServerSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF6E48541F1C92A300F4C65E /* ServerSettings.plist */; };
 		CF85EEC91F18FFA9009BD5DB /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85EEC81F18FFA9009BD5DB /* LoginTextField.swift */; };
 		CF85EECB1F190297009BD5DB /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85EECA1F190297009BD5DB /* LoginButton.swift */; };
 		CFA733511F19C9F700EBC31E /* Constraintable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA733501F19C9F700EBC31E /* Constraintable.swift */; };
+		CFDCB7B01F1E1EB400973004 /* AuthControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCB7AF1F1E1EB400973004 /* AuthControllerDelegate.swift */; };
+		CFDCB7B21F1E259600973004 /* AuthControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCB7B11F1E259600973004 /* AuthControllerDataSource.swift */; };
+		CFDCB7B41F1E2E1700973004 /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDCB7B31F1E2E1700973004 /* UserDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +77,14 @@
 		C0752AC0B1484421C9660620 /* Pods_MimoiOSCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CA2B99159E74AED055510E /* Pods_MimoiOSCodingChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6618171F18E2220001898F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		CF6E48521F1C922A00F4C65E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CF6E48541F1C92A300F4C65E /* ServerSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServerSettings.plist; sourceTree = "<group>"; };
 		CF85EEC81F18FFA9009BD5DB /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		CF85EECA1F190297009BD5DB /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		CFA733501F19C9F700EBC31E /* Constraintable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraintable.swift; sourceTree = "<group>"; };
+		CFDCB7AF1F1E1EB400973004 /* AuthControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthControllerDelegate.swift; sourceTree = "<group>"; };
+		CFDCB7B11F1E259600973004 /* AuthControllerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthControllerDataSource.swift; sourceTree = "<group>"; };
+		CFDCB7B31F1E2E1700973004 /* UserDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
 		E18B8DDCBC35C4D884C0C7B3 /* Pods-MimoiOSCodingChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MimoiOSCodingChallengeTests/Pods-MimoiOSCodingChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA866BE4B2BF25DEA765CAF4 /* Pods_MimoiOSCodingChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MimoiOSCodingChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,6 +145,7 @@
 				CF66180F1F189B740001898F /* App */,
 				CF6618111F189BF80001898F /* Authentication */,
 				CF6618101F189BD10001898F /* Settings */,
+				CF6E48511F1C8FB700F4C65E /* Networking */,
 			);
 			path = MimoiOSCodingChallenge;
 			sourceTree = "<group>";
@@ -225,6 +236,15 @@
 			name = Authentication;
 			sourceTree = "<group>";
 		};
+		CF6E48511F1C8FB700F4C65E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E48521F1C922A00F4C65E /* NetworkClient.swift */,
+				CF6E48541F1C92A300F4C65E /* ServerSettings.plist */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		CF85EEC61F18FF56009BD5DB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +265,9 @@
 		CFA7334F1F19C9D200EBC31E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				CFDCB7B31F1E2E1700973004 /* UserDataSource.swift */,
+				CFDCB7B11F1E259600973004 /* AuthControllerDataSource.swift */,
+				CFDCB7AF1F1E1EB400973004 /* AuthControllerDelegate.swift */,
 				CFA733501F19C9F700EBC31E /* Constraintable.swift */,
 			);
 			name = Protocols;
@@ -371,6 +394,7 @@
 			files = (
 				2BF3DF051E54B79A004DD445 /* LaunchScreen.storyboard in Resources */,
 				2BF3DF021E54B79A004DD445 /* Assets.xcassets in Resources */,
+				CF6E48551F1C92A300F4C65E /* ServerSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,14 +557,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFDCB7B21F1E259600973004 /* AuthControllerDataSource.swift in Sources */,
+				CFDCB7B01F1E1EB400973004 /* AuthControllerDelegate.swift in Sources */,
 				2BCC6AB91E55A68400585FA1 /* SettingsAvatar.m in Sources */,
 				CF85EECB1F190297009BD5DB /* LoginButton.swift in Sources */,
 				CF85EEC91F18FFA9009BD5DB /* LoginTextField.swift in Sources */,
+				CF6E48531F1C922A00F4C65E /* NetworkClient.swift in Sources */,
 				2BF3DEFA1E54B79A004DD445 /* AppDelegate.m in Sources */,
 				2BCC6AB61E55A55A00585FA1 /* SettingsTableViewCell.swift in Sources */,
 				CF6618181F18E2220001898F /* AuthenticationViewController.swift in Sources */,
 				2BF3DEF71E54B79A004DD445 /* main.m in Sources */,
 				2BF3DF2D1E54B7DF004DD445 /* SettingsViewController.swift in Sources */,
+				CFDCB7B41F1E2E1700973004 /* UserDataSource.swift in Sources */,
 				2BF3DF2C1E54B7DF004DD445 /* SettingsViewController.m in Sources */,
 				CFA733511F19C9F700EBC31E /* Constraintable.swift in Sources */,
 			);

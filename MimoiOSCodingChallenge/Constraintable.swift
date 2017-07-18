@@ -9,6 +9,7 @@
 import UIKit
 
 protocol Constraintable {
+
     var width: Int { get }
     var height: Int { get }
 }

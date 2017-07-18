@@ -25,6 +25,7 @@ class LoginTextField: UITextField, Constraintable {
         backgroundColor = UIColor.white
         borderStyle = .roundedRect
         autocorrectionType = .no
+        autocapitalizationType = .none
         clearButtonMode = .whileEditing
         translatesAutoresizingMaskIntoConstraints = false
     }
